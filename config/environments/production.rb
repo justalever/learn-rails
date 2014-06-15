@@ -81,8 +81,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #email enabled in production
-  config.action_mailer.default_url_options = { :host => ENV["DOMAIN_NAME"]}
+  # email enabled in production
+  config.action_mailer.default_url_options = { :host => ENV["DOMAIN_NAME"] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -92,7 +92,7 @@ Rails.application.configure do
     port: 587,
     domain: ENV["DOMAIN_NAME"],
     authentication: "plain",
-    enable_starttls_auto : true,
+    enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
